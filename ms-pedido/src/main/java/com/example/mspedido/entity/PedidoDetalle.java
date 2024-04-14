@@ -12,7 +12,7 @@ public class PedidoDetalle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombre_producto;
-    private Integer  cantidad;
+    private Double  cantidad;
     private BigDecimal precioUnitario;
 
     private Double precio;
