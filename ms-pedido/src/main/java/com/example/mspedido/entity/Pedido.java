@@ -20,6 +20,10 @@ public class Pedido {
     private BigDecimal total;
     private String vendedor;
     private String comentario;
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "venta_id")
+    private List<PedidoDetalle> detalle;
 
 
 }
