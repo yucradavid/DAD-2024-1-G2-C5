@@ -17,5 +17,6 @@ public class ProductoDto {
     private LocalDate fecha_creacion;
     private LocalDate fecha_fin;
 
+    private CatergoriaDto categoria;
 
 }
