@@ -1,6 +1,7 @@
 package com.example.mspedido.service.impl;
 
 
+import com.example.mspedido.dto.ClienteDto;
 import com.example.mspedido.entity.PedidoDetalle;
 import com.example.mspedido.repository.PedidoDetalleRepository;
 
@@ -13,8 +14,11 @@ import java.util.Optional;
 
 @Service
 public class PedidoDetalleServiceImpl implements PedidoDetalleService {
+
+
     @Autowired
     private PedidoDetalleRepository pedidoDetalleRepository;
+
 
     @Override
     public List<PedidoDetalle> lista() {
