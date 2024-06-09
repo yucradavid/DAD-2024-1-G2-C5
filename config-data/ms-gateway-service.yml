@@ -21,6 +21,10 @@ spring:
           uri: lb://ms-matricula-service
           predicates:
             - Path=/curso/**, /matricula/**
+        - id: ms-matriculas-service
+          uri: lb://ms-matriculas-service
+          predicates:
+            - Path=/curso/**, /matricula/**
         - id: ms-catalogo-service
           uri: lb://ms-catalogo-service
           predicates:
