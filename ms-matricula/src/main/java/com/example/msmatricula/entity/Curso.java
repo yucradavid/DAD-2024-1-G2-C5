@@ -17,6 +17,5 @@ public class Curso {
     private String descripcion;
     private String periodo;
 
-    @Transient
-    private DocenteDto docenteDto ;
+
 }
