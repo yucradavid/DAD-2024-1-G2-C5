@@ -1,5 +1,6 @@
 package com.example.msmatricula.entity;
 
+import com.example.msmatricula.dto.EstudianteDto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -20,4 +21,8 @@ public class Matricula {
     @JoinColumn(name = "curso_id")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Curso curso;
+
+
+    @Transient
+    private EstudianteDto estudianteDto ;
 }

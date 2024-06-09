@@ -1,5 +1,6 @@
 package com.example.msmatricula.entity;
 
+import com.example.msmatricula.dto.DocenteDto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -22,4 +23,7 @@ public class Curso {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "curso_id")
     private List<Matricula> matriculas;
+
+    @Transient
+    private DocenteDto docenteDto ;
 }
