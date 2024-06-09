@@ -18,9 +18,5 @@ public class Matricula {
 
     @Transient
     private EstudianteDto estudianteDto ;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "curso_id")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Curso curso;
+    
 }
