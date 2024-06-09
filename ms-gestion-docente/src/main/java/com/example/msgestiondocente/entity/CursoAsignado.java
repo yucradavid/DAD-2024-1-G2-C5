@@ -12,7 +12,10 @@ public class CursoAsignado {
     private Integer id;
     private Integer Cursoid;
 
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "docente_id")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    private Docente docente;
 
 
 
