@@ -1,6 +1,7 @@
 package com.example.msmatricula.service;
 
-import com.example.msadmatricula.entity.Curso;
+
+import com.example.msmatricula.entity.Curso;
 
 import java.util.List;
 import java.util.Optional;

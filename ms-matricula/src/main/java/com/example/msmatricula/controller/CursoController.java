@@ -1,7 +1,8 @@
 package com.example.msmatricula.controller;
 
-import com.example.msadmatricula.entity.Curso;
-import com.example.msadmatricula.service.CursoService;
+
+import com.example.msmatricula.entity.Curso;
+import com.example.msmatricula.service.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/curso")
+@RequestMapping("/cursos")
 public class CursoController {
     @Autowired
     private CursoService cursoService;

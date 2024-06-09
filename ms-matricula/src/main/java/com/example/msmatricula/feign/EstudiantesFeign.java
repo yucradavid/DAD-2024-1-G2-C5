@@ -1,7 +1,8 @@
 package com.example.msmatricula.feign;
 
 
-import com.example.msadmatricula.dto.EstudianteDto;
+
+import com.example.msmatricula.dto.EstudianteDto;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;

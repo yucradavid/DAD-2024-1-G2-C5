@@ -1,8 +1,9 @@
 package com.example.msmatricula.service.Impl;
 
-import com.example.msadmatricula.entity.Matricula;
-import com.example.msadmatricula.repository.MatriculaRepository;
-import com.example.msadmatricula.service.MatriculaService;
+
+import com.example.msmatricula.entity.Matricula;
+import com.example.msmatricula.repository.MatriculaRepository;
+import com.example.msmatricula.service.MatriculaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class MatriculaServiceImpl implements MatriculaService{
+public class MatriculaServiceImpl implements MatriculaService {
     @Autowired
     private MatriculaRepository matriculaRepository;
 
