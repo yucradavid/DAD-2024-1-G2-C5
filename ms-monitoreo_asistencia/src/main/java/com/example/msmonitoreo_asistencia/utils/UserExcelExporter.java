@@ -37,6 +37,7 @@ public class UserExcelExporter {
 
         createCell(row, 0, "ID", style);
         createCell(row, 1, "observaciones", style);
+        createCell(row, 2, "estado", style);
 
     }
 
