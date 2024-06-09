@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CursoService {
-    public List<Curso> listar();
+    public List<Curso> lista();
     
     public Curso guardar(Curso curso);
 

@@ -15,8 +15,9 @@ public class MatriculaServiceImpl implements MatriculaService {
     @Autowired
     private MatriculaRepository matriculaRepository;
 
+
     @Override
-    public List<Matricula> listar() {
+    public List<Matricula> lista() {
         return matriculaRepository.findAll();
     }
 
@@ -36,7 +37,8 @@ public class MatriculaServiceImpl implements MatriculaService {
     }
 
     @Override
-    public void eliminar(Integer id) {
+    public void eleminar(Integer id) {
         matriculaRepository.deleteById(id);
+
     }
 }

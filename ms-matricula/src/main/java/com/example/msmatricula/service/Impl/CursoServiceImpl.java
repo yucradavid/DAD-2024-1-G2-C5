@@ -15,8 +15,9 @@ public class CursoServiceImpl implements CursoService {
     @Autowired
     private CursoRepository cursoRepository;
 
+
     @Override
-    public List<Curso> listar() {
+    public List<Curso> lista() {
         return cursoRepository.findAll();
     }
 
@@ -38,5 +39,6 @@ public class CursoServiceImpl implements CursoService {
     @Override
     public void eliminar(Integer id) {
         cursoRepository.deleteById(id);
+
     }
 }

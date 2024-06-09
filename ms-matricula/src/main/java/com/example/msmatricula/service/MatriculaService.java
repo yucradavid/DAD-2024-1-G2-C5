@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface MatriculaService {
-    public List<Matricula> listar();
+    public List<Matricula> lista();
     
     public Matricula guardar(Matricula matricula);
 
