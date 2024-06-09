@@ -16,29 +16,28 @@ public class CursoController {
     private CursoService cursoService;
 
     @GetMapping
-    public ResponseEntity<List<Curso>> listar() {
+    ResponseEntity<List<Curso>> lista(){
         return ResponseEntity.ok(cursoService.listar());
     }
-
     @PostMapping
-    public ResponseEntity<Curso> guardar(@RequestBody Curso curso) {
-        return ResponseEntity.ok(cursoService.guardar(curso));
+    ResponseEntity<Curso> guardar(@RequestBody Curso curso){
+        return ResponseEntity.ok(cursoService.guardar((curso)));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Curso> buscarPOrId(@PathVariable(required = true) Integer id) {
+    ResponseEntity<Curso> buscarPorId(@PathVariable(required = true) Integer id){
         return ResponseEntity.ok(cursoService.buscarPorId(id).get());
+
     }
 
     @PutMapping
-    public ResponseEntity<Curso> actualizar(@RequestBody Curso curso) {
-        return ResponseEntity.ok(cursoService.actualizar(curso));
-
+    ResponseEntity<Curso> actualizar(@RequestBody Curso curso){
+        return ResponseEntity.ok(cursoService.actualizar((curso)));
     }
-
     @DeleteMapping("/{id}")
-    public ResponseEntity<List<Curso>> eliminar(@PathVariable(required = true) Integer id) {
+    public ResponseEntity<List<Curso>> eleminar(@PathVariable(required = true) Integer id){
         cursoService.eliminar(id);
         return ResponseEntity.ok(cursoService.listar());
+
     }
 }
