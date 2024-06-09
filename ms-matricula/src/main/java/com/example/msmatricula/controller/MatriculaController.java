@@ -36,7 +36,7 @@ public class MatriculaController {
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<List<Matricula>> eleminar(@PathVariable(required = true) Integer id){
-        matriculaService.eliminar(id);
+        matriculaService.eleminar(id);
         return ResponseEntity.ok(matriculaService.lista());
 
     }

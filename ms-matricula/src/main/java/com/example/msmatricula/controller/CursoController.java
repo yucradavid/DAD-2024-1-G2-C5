@@ -36,7 +36,7 @@ public class CursoController {
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<List<Curso>> eleminar(@PathVariable(required = true) Integer id){
-        cursoService.eliminar(id);
+        cursoService.eleminar(id);
         return ResponseEntity.ok(cursoService.lista());
 
     }

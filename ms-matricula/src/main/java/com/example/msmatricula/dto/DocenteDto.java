@@ -14,5 +14,5 @@ public class DocenteDto {
     private String email;
     private String especialidad;
 
-
+    private EstudianteDto estudianteDto;
 }

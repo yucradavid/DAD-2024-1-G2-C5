@@ -13,6 +13,6 @@ public class EstudianteDto {
     private String telefono;
     private String email;
     private String gradoActual;
-
+    private DocenteDto docenteDto;
 
 }

@@ -7,13 +7,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CursoService {
-    public List<Curso> lista();
-    
-    public Curso guardar(Curso curso);
-
-    public Optional<Curso> buscarPorId(Integer id);
-
-    public Curso actualizar(Curso curso);
-
-    public void eliminar(Integer id);
+    List<Curso> lista();
+    Curso guardar(Curso curso);
+    Optional<Curso> buscarPorId(Integer id);
+    Curso actualizar(Curso curso);
+    void eleminar(Integer id);
 }

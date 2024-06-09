@@ -37,7 +37,7 @@ public class CursoServiceImpl implements CursoService {
     }
 
     @Override
-    public void eliminar(Integer id) {
+    public void eleminar(Integer id) {
         cursoRepository.deleteById(id);
 
     }
