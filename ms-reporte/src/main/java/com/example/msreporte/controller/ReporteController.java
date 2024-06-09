@@ -23,7 +23,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/reporte")
+@RequestMapping("/reportes")
 public class ReporteController {
     @Autowired
     private ReporteService reporteService;
