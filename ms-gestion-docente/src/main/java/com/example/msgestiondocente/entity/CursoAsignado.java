@@ -15,7 +15,7 @@ public class CursoAsignado {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "docente_id")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Docente docente;
+    private Docente detallesDocente;
 
 
 
