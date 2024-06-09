@@ -12,9 +12,7 @@ import org.springframework.context.annotation.Bean;
 @EnableFeignClients
 public class MsReporteApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MsReporteApplication.class, args);
-	}
+	public static void main(String[] args) { SpringApplication.run(MsReporteApplication.class, args); }
 	@Bean
 	public OpenAPI custumOpenAPI() {
 		return new OpenAPI().info(new Info()
