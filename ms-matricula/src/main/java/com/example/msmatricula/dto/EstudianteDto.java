@@ -1,5 +1,6 @@
 package com.example.msmatricula.dto;
 
+import jakarta.persistence.Transient;
 import lombok.Data;
 
 import java.time.LocalDate;
