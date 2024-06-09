@@ -1,6 +1,7 @@
 package com.example.msreporte.utils;
 
-import com.example.msreportanalisis.entity.Reporte;
+
+import com.example.msreporte.entity.Reporte;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import java.io.ByteArrayOutputStream;

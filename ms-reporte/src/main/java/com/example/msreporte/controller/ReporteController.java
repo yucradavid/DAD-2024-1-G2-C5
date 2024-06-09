@@ -1,9 +1,9 @@
 package com.example.msreporte.controller;
 
-import com.example.msreportanalisis.entity.Reporte;
-import com.example.msreportanalisis.service.ReporteService;
-import com.example.msreportanalisis.utils.PdfUtils;
-import com.example.msreportanalisis.utils.UserExcelExporter;
+import com.example.msreporte.entity.Reporte;
+import com.example.msreporte.service.ReporteService;
+import com.example.msreporte.utils.PdfUtils;
+import com.example.msreporte.utils.UserExcelExporter;
 import com.itextpdf.text.DocumentException;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +29,8 @@ public class ReporteController {
     private ReporteService reporteService;
 
     @GetMapping
-    public ResponseEntity<List<Reporte>> listar() {
-        return ResponseEntity.ok(reporteService.listar());
+    public ResponseEntity<List<Reporte>> lista() {
+        return ResponseEntity.ok(reporteService.lista());
     }
 
     @PostMapping
@@ -51,8 +51,8 @@ public class ReporteController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<List<Reporte>> eliminar(@PathVariable(required = true) Integer id) {
-        reporteService.eliminar(id);
-        return ResponseEntity.ok(reporteService.listar());
+        reporteService.eleminar(id);
+        return ResponseEntity.ok(reporteService.lista());
     }
 
 
@@ -61,7 +61,7 @@ public class ReporteController {
     @GetMapping("/pdf")
     public ResponseEntity<byte[]> exportPdf() throws IOException, DocumentException {
         //List<Map<String, Object>> queryResults = myService.executeQuery(request);
-        ByteArrayOutputStream pdfStream = PdfUtils.generatePdfStream(reporteService.listar());
+        ByteArrayOutputStream pdfStream = PdfUtils.generatePdfStream(reporteService.lista());
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_PDF);
         headers.set(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=query_results.pdf");
@@ -78,7 +78,7 @@ public class ReporteController {
         String headerValue = "attachment; filename=users_" + currentDateTime + ".xlsx";
         response.setHeader(headerKey, headerValue);
 
-        UserExcelExporter excelExporter = new UserExcelExporter(reporteService.listar());
+        UserExcelExporter excelExporter = new UserExcelExporter(reporteService.lista());
         excelExporter.export(response);
     }
     @PostMapping("/upload")

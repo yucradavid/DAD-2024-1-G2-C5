@@ -1,7 +1,8 @@
 package com.example.msreporte.repository;
 
+import com.example.msreporte.entity.Reporte;
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.example.msreportanalisis.entity.Reporte;
+
 
 public interface ReporteRepository extends JpaRepository<Reporte, Integer>{
     

@@ -1,17 +1,15 @@
 package com.example.msreporte.service;
 
-import com.example.msreportanalisis.entity.Reporte;
+
+import com.example.msreporte.entity.Reporte;
+
 import java.util.List;
 import java.util.Optional;
 
 public interface ReporteService {
-    public List<Reporte> listar();
-    
-    public Reporte guardar(Reporte reporte);
-
-    public Optional<Reporte> buscarPorId(Integer id);
-
-    public Reporte actualizar(Reporte reporte);
-
-    public void eliminar(Integer id);
+    List<Reporte> lista();
+    Reporte guardar(Reporte reporte);
+    Optional<Reporte> buscarPorId(Integer id);
+    Reporte actualizar(Reporte reporte);
+    void eleminar(Integer id);
 }

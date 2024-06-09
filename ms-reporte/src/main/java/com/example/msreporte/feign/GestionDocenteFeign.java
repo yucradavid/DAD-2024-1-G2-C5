@@ -1,7 +1,8 @@
 package com.example.msreporte.feign;
 
 
-import com.example.msreportanalisis.dto.DocenteDto;
+
+import com.example.msreporte.dto.DocenteDto;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;

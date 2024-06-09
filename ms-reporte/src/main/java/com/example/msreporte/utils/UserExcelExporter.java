@@ -1,5 +1,6 @@
 package com.example.msreporte.utils;
-import com.example.msreportanalisis.entity.Reporte;
+
+import com.example.msreporte.entity.Reporte;
 import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;

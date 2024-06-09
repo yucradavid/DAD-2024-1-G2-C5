@@ -3,20 +3,22 @@ package com.example.msreporte.service.Impl;
 import java.util.List;
 import java.util.Optional;
 
+import com.example.msreporte.entity.Reporte;
+import com.example.msreporte.repository.ReporteRepository;
+import com.example.msreporte.service.ReporteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.msreportanalisis.entity.Reporte;
-import com.example.msreportanalisis.repository.ReporteRepository;
-import com.example.msreportanalisis.service.ReporteService;
+
 
 @Service
 public class ReporteServiceImpl implements ReporteService {
     @Autowired
     private ReporteRepository reporteRepository;
 
+
     @Override
-    public List<Reporte> listar() {
+    public List<Reporte> lista() {
         return reporteRepository.findAll();
     }
 
@@ -36,7 +38,8 @@ public class ReporteServiceImpl implements ReporteService {
     }
 
     @Override
-    public void eliminar(Integer id) {
+    public void eleminar(Integer id) {
         reporteRepository.deleteById(id);
+
     }
 }
