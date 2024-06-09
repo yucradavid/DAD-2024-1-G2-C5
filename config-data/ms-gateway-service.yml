@@ -17,10 +17,6 @@ spring:
         locator:
           enable: true
       routes:
-        - id: ms-matricula-service
-          uri: lb://ms-matricula-service
-          predicates:
-            - Path=/curso/**, /matricula/**
         - id: ms-matriculas-service
           uri: lb://ms-matriculas-service
           predicates:
