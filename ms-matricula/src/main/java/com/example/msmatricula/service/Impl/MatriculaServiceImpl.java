@@ -37,7 +37,7 @@ public class MatriculaServiceImpl implements MatriculaService {
     }
 
     @Override
-    public void eleminar(Integer id) {
+    public void eliminar(Integer id) {
         matriculaRepository.deleteById(id);
 
     }
