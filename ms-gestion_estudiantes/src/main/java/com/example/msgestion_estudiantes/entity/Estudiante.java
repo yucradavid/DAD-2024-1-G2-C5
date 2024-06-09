@@ -20,7 +20,10 @@ public class Estudiante {
     private String email;
     private String gradoActual;
 
-
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "estudiante_id")
+    private List<Historial_Académico> historialAcadémicos;
 
 
 }
