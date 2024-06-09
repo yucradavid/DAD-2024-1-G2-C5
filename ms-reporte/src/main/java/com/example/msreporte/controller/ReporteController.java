@@ -29,13 +29,12 @@ public class ReporteController {
     private ReporteService reporteService;
 
     @GetMapping
-    public ResponseEntity<List<Reporte>> lista() {
+    ResponseEntity<List<Reporte>> lista(){
         return ResponseEntity.ok(reporteService.lista());
     }
-
     @PostMapping
-    public ResponseEntity<Reporte> guardar(@RequestBody Reporte reporte) {
-        return ResponseEntity.ok(reporteService.guardar(reporte));
+    ResponseEntity<Reporte> guardar(@RequestBody Reporte pedido){
+        return ResponseEntity.ok(reporteService.guardar((pedido)));
     }
 
     @GetMapping("/{id}")
