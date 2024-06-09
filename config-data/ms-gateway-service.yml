@@ -20,7 +20,7 @@ spring:
         - id: ms-monitoreoasistencia-service
           uri: lb://ms-monitoreoasistencia-service
           predicates:
-            - Path=/registro_asistencia/**
+            - Path=/registroasistencia/**
         - id: ms-reporte-service
           uri: lb://ms-reporte-service
           predicates:
