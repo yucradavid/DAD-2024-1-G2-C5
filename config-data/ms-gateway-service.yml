@@ -17,6 +17,10 @@ spring:
         locator:
           enable: true
       routes:
+        - id: ms-gestiondocentes-service
+          uri: lb://ms-gestiondocentes-service
+          predicates:
+            - Path=/asignatura/**, /docente/**
         - id: ms-monitoreoasistencia-service
           uri: lb://ms-monitoreoasistencia-service
           predicates:
