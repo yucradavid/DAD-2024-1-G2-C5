@@ -16,5 +16,5 @@ public class Matricula {
     private LocalDate fechaMatricula;
     private String estado;
 
-  
+
 }
