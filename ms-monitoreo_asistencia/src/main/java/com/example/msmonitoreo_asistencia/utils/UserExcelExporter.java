@@ -67,6 +67,7 @@ public class UserExcelExporter {
 
             createCell(row, columnCount++, registroAsistencia.getId(), style);
             createCell(row, columnCount++, registroAsistencia.getObservaciones(), style);
+            createCell(row, columnCount++, registroAsistencia.getEstado(), style);
         }
     }
 
