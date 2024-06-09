@@ -17,13 +17,6 @@ public class Curso {
     private String descripcion;
     private String periodo;
 
-    private Integer Docenteid;
-
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "curso_id")
-    private List<Matricula> matriculas;
-
     @Transient
     private DocenteDto docenteDto ;
 }
