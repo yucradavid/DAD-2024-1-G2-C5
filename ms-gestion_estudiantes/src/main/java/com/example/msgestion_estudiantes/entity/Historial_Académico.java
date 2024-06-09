@@ -18,8 +18,4 @@ public class Historial_Académico {
     private float calificacion;
     private LocalDate fecha;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "estudiante_id")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private Estudiante estudiante;
 }
