@@ -16,7 +16,7 @@ public class MatriculaController {
     private MatriculaService matriculaService;
 
     @GetMapping
-    ResponseEntity<List<Matricula>> lista(){
+    ResponseEntity<List<Matricula>> listar(){
         return ResponseEntity.ok(matriculaService.listar());
     }
     @PostMapping
