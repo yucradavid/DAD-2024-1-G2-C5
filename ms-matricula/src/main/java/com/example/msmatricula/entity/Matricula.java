@@ -19,8 +19,6 @@ public class Matricula {
 
     @Transient
     private EstudianteDto estudianteDto ;
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "venta_id")
+   @Transient
     private List<Curso> detalle;
 }
