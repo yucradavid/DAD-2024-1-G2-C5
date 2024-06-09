@@ -27,6 +27,6 @@ public class Curso {
 
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "curso_id")
+    @JoinColumn(name = "venta_id")
     private List<Matricula> detalle;
 }
