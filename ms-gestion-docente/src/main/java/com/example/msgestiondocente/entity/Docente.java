@@ -20,10 +20,7 @@ public class Docente {
     private String email;
     private String especialidad;
 
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "docente_id")
-    private List<CursoAsignado> cursosAsignados;
+
 
 
 
