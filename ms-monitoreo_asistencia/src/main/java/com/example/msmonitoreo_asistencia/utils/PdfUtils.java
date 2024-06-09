@@ -20,6 +20,7 @@ public class PdfUtils {
         for (RegistroAsistencia registroAsistencia :registroAsistencias) {
             Font boldFont = new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD);
             Paragraph paragraph = new Paragraph(registroAsistencia.getEstado(), boldFont);
+            new Paragraph(registroAsistencia.getObservaciones(), boldFont);
             document.add(paragraph);
         }
         document.add(new Paragraph("\n"));
